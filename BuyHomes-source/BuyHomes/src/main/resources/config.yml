@@ -1,0 +1,29 @@
+# BuyHomes configuration
+
+# How many homes a player gets for free, before buying any extra slots.
+base-homes: 1
+
+# The absolute maximum number of homes a player can ever have,
+# even after buying extra slots. Set to -1 to allow unlimited buying.
+max-homes: 3
+
+# Cost (in your economy's currency, via Vault) for each additional home slot.
+# This is charged every time a player runs /buyhomes.
+cost-per-home: 40000
+
+messages:
+  no-economy: "&cNo economy plugin found. Ask an admin to install Vault + an economy plugin."
+  not-enough-money: "&cYou don't have enough money. You need &e%cost%&c."
+  max-reached: "&cYou already have the maximum of &e%max%&c homes."
+  bought: "&aYou bought an extra home slot for &e%cost%&a! You now have &e%total%&a home slots."
+  home-set: "&aHome &e%name%&a has been set."
+  home-deleted: "&aHome &e%name%&a has been deleted."
+  home-not-found: "&cYou don't have a home named &e%name%&c."
+  home-limit-reached: "&cYou've used all &e%max%&c of your home slots. Buy more with &e/buyhomes&c."
+  no-homes: "&7You don't have any homes yet. Set one with &e/sethome <name>&7."
+  homes-list: "&7Your homes (&e%used%&7/&e%max%&7): &f%list%"
+  teleported: "&aTeleported to &e%name%&a."
+  usage-sethome: "&cUsage: /sethome <name>"
+  usage-home: "&cUsage: /home <name>"
+  usage-delhome: "&cUsage: /delhome <name>"
+  players-only: "&cOnly players can use this command."

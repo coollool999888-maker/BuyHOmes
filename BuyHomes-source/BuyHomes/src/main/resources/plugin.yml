@@ -1,0 +1,51 @@
+name: BuyHomes
+version: '1.0.0'
+main: com.buyhomes.plugin.BuyHomesPlugin
+# NOTE: if the plugin fails to load on your 26.2 server with an "Unsupported api-version"
+# error, change this line to api-version: '26.2' instead.
+api-version: '1.21'
+author: YourName
+description: Buyable home slots — /sethome, /home, /delhome, /homes, /buyhomes
+softdepend: [Vault]
+
+commands:
+  sethome:
+    description: Set a home at your current location.
+    usage: /sethome <name>
+    permission: buyhomes.sethome
+    permission-message: You don't have permission to set homes.
+  home:
+    description: Teleport to one of your homes.
+    usage: /home <name>
+    permission: buyhomes.home
+    permission-message: You don't have permission to use homes.
+  delhome:
+    description: Delete one of your homes.
+    usage: /delhome <name>
+    permission: buyhomes.delhome
+    permission-message: You don't have permission to delete homes.
+  homes:
+    description: List your homes and how many slots you have.
+    usage: /homes
+    permission: buyhomes.homes
+    permission-message: You don't have permission to view homes.
+  buyhomes:
+    description: Buy an additional home slot.
+    usage: /buyhomes
+    permission: buyhomes.buy
+    permission-message: You don't have permission to buy home slots.
+
+permissions:
+  buyhomes.sethome:
+    default: true
+  buyhomes.home:
+    default: true
+  buyhomes.delhome:
+    default: true
+  buyhomes.homes:
+    default: true
+  buyhomes.buy:
+    default: true
+  buyhomes.admin:
+    description: Bypass home-slot limits and reload the config.
+    default: op
